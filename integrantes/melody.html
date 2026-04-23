@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melody Amaro — Perfil</title>
+  <link rel="stylesheet" href="../css/melody.css">
+</head>
+
+<body class="melody-page">
+  <a class="melody-skip" href="#melody-contenido">Ir al contenido</a>
+
+  <header class="melody-nav" role="navigation" aria-label="Navegación">
+    <span class="melody-nav-label">Perfil de integrante</span>
+    <a class="melody-back" href="../index.html">← Volver a la portada</a>
+  </header>
+
+  <main class="melody-wrap" id="melody-contenido">
+    <article class="melody-card" aria-labelledby="melody-nombre">
+      <div class="melody-head">
+        <img
+          class="melody-photo"
+          src="../img/melody-avatar.png"
+          width="200"
+          height="200"
+          alt="Foto o avatar de Melody Amaro">
+        <div class="melody-title-block">
+          <h1 id="melody-nombre">Melody Amaro</h1>
+          <p class="melody-tagline">
+            Hola, mi nombre es Melody Amaro. Soy estudiante de desarrollo web. En los ultimos meses estoy haciendo proyectos dedicados al frontend. Me gusta aprender siempre alguna tecnologia nueva y actualmente lo relacionado a la inteligencia artificial. Me gustaria en un futuro ayudar a empresas a potenciar sus ventas con esa tecnologia.
+          </p>
+        </div>
+      </div>
+
+      <div class="melody-facts" aria-label="Datos básicos">
+        <h2>Datos</h2>
+        <div class="melody-grid">
+          <div class="melody-block">
+            <h2>Ubicación actual</h2>
+            <p>Buenos Aires, Argentina</p>
+          </div>
+          <div class="melody-block">
+            <h2>Edad</h2>
+            <p>33 años</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="melody-grid melody-grid--facts" aria-label="Habilidades e intereses">
+        <div class="melody-block">
+          <h2>Habilidades</h2>
+          <ul>
+            <li><span class="melody-pill">HTML estructurado</span></li>
+            <li><span class="melody-pill">CSS (layout y estilos)</span></li>
+            <li><span class="melody-pill">JavaScript básico</span></li>
+            <li><span class="melody-pill">Trabajo en equipo / Git</span></li>
+          </ul>
+        </div>
+        <div class="melody-block">
+          <h2>Películas favoritas</h2>
+          <ul>
+            <li><span class="melody-pill">Batman: el caballero de la noche</span></li>
+            <li><span class="melody-pill">Orgullo y prejuicio</span></li>
+            <li><span class="melody-pill">Forrest Gump</span></li>
+          </ul>
+        </div>
+        <div class="melody-block melody-block--span">
+          <h2>Discos musicales favoritos</h2>
+          <ul>
+            <li><span class="melody-pill">Born this way — Lady Gaga</span></li>
+            <li><span class="melody-pill">Future Nostalgia - Dua Lipa</span></li>
+            <li><span class="melody-pill">Madonna - Confessions on a Dance Floor</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="melody-toggle">
+        <button
+          type="button"
+          class="melody-btn"
+          id="melody-btn-toggle"
+          aria-expanded="false"
+          aria-controls="melody-details">
+          Mostrar más sobre mí
+        </button>
+      </div>
+
+      <div id="melody-details" class="melody-facts melody-details-extra" hidden>
+        <h2>Detalles extra</h2>
+        <p class="melody-details-lead">
+          Información complementaria sobre mis intereses y la forma en que trabajo.
+        </p>
+
+        <div class="melody-details-grid">
+          <section class="melody-details-block" aria-labelledby="melody-extra-hobbies">
+            <h3 id="melody-extra-hobbies">Hobbies y pasatiempos</h3>
+            <ul class="melody-details-list">
+              <li>Me gusta ver películas de terror, suspenso, aventura y ciencia ficción.</li>
+              <li>Me encanta viajar y aprovecho para conocer un lugar nuevo cada vez que puedo.</li>
+            </ul>
+          </section>
+
+          <section class="melody-details-block" aria-labelledby="melody-extra-objetivos">
+            <h3 id="melody-extra-objetivos">Objetivos a corto plazo</h3>
+            <ul class="melody-details-list">
+              <li>Profundizar JavaScript (DOM, eventos y buenas prácticas de código).</li>
+              <li>Participar en un proyecto grupal con entregas claras y revisión entre pares.</li>
+              <li>Mejorar mi portfolio con piezas que muestren proceso, no solo resultado final.</li>
+            </ul>
+          </section>
+
+          <section class="melody-details-block melody-details-block--full" aria-labelledby="melody-extra-equipo">
+            <h3 id="melody-extra-equipo">Cómo me gusta trabajar en equipo</h3>
+            <p>
+              Valoro la comunicación frecuente, las tareas bien definidas y poder pedir ayuda a tiempo.
+              Prefiero documentar decisiones pequeñas (por ejemplo en jira) para
+              que el resto del equipo sepa qué se hizo y por qué.
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <script src="../js/melody.js" defer></script>
+</body>
+
+</html>
