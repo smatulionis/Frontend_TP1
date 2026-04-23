@@ -1,0 +1,353 @@
+/* Tarjeta — Melody Amaro (TP1) */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600&display=swap");
+
+:root {
+  --m-bg: #0f0e12;
+  --m-surface: #1a1822;
+  --m-text: #f4f0fa;
+  --m-muted: #a89bc4;
+  --m-accent: #c9a0ff;
+  --m-border: rgba(201, 160, 255, 0.25);
+  --m-radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.melody-page {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--m-text);
+  background: radial-gradient(ellipse 120% 80% at 50% 0%, #2a1f3d 0%, var(--m-bg) 55%);
+}
+
+.melody-skip {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.melody-skip:focus {
+  left: 12px;
+  top: 12px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  z-index: 10;
+  background: var(--m-accent);
+  color: #1a0f2e;
+  border-radius: 8px;
+}
+
+.melody-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--m-border);
+}
+
+.melody-nav a {
+  color: var(--m-muted);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.melody-nav a:hover,
+.melody-nav a:focus-visible {
+  color: var(--m-text);
+  border-color: var(--m-border);
+  background: rgba(201, 160, 255, 0.08);
+  outline: none;
+}
+.melody-nav .melody-back {
+  background: var(--m-accent);
+  color: #1a0f2e;
+  font-weight: 600;
+}
+.melody-nav .melody-back:hover {
+  background: #dcc4ff;
+}
+.melody-nav-label {
+  color: var(--m-muted);
+  font-size: 0.9rem;
+}
+
+.melody-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.melody-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--m-surface);
+  border: 1px solid var(--m-border);
+  border-radius: var(--m-radius);
+  padding: 28px 24px 32px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+
+.melody-card h1,
+.melody-facts h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-variation-settings: "opsz" 72;
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+  color: var(--m-text);
+}
+
+.melody-tagline {
+  color: var(--m-muted);
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+.melody-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.melody-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--m-accent);
+  box-shadow: 0 8px 24px rgba(201, 160, 255, 0.25);
+}
+
+.melody-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.melody-grid--facts {
+  margin-top: 20px;
+}
+.melody-block--span {
+  grid-column: 1 / -1;
+}
+
+.melody-block h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--m-muted);
+  margin: 0 0 8px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+}
+
+.melody-block p,
+.melody-block li {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--m-text);
+}
+
+.melody-block ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.melody-pill {
+  display: inline-block;
+  background: rgba(201, 160, 255, 0.12);
+  border: 1px solid var(--m-border);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+#melody-details {
+  margin-top: 8px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid var(--m-border);
+}
+#melody-details[hidden] {
+  display: none;
+}
+#melody-details p {
+  margin: 0 0 8px;
+  color: var(--m-muted);
+  font-size: 0.95rem;
+}
+#melody-details p:last-child {
+  margin-bottom: 0;
+}
+
+#melody-details.melody-details-extra > h2 {
+  margin-bottom: 10px;
+}
+
+.melody-details-lead {
+  margin: 0 0 16px !important;
+  line-height: 1.55;
+}
+
+.melody-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.melody-details-block h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--m-text);
+  margin: 0 0 8px;
+}
+
+.melody-details-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--m-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.melody-details-list li {
+  margin-bottom: 6px;
+}
+
+.melody-details-list li:last-child {
+  margin-bottom: 0;
+}
+
+.melody-details-block p {
+  margin: 0;
+  color: var(--m-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.melody-details-block--full {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 900px) {
+  .melody-details-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .melody-details-block--full {
+    grid-column: 1 / -1;
+  }
+}
+
+.melody-toggle {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.melody-btn {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #b388ff, #7c4dff);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(124, 77, 255, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.melody-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(124, 77, 255, 0.5);
+}
+.melody-btn:focus-visible {
+  outline: 2px solid var(--m-accent);
+  outline-offset: 3px;
+}
+body.melody-theme-day .melody-btn {
+  background: linear-gradient(135deg, #5b4d6e, #3d2f55);
+  box-shadow: none;
+}
+
+/* Modo claro (JS) */
+body.melody-theme-day {
+  --m-bg: #f5f0ff;
+  --m-surface: #ffffff;
+  --m-text: #1c1530;
+  --m-muted: #5c4d6e;
+  --m-accent: #6b4c9a;
+  --m-border: rgba(27, 20, 45, 0.12);
+  background: radial-gradient(ellipse 120% 80% at 50% 0%, #e8dfff 0%, var(--m-bg) 55%);
+}
+body.melody-theme-day .melody-card {
+  box-shadow: 0 16px 40px rgba(80, 60, 120, 0.12);
+}
+body.melody-theme-day #melody-details {
+  background: rgba(107, 76, 154, 0.08);
+}
+
+/* —— Breakpoints consigna —— */
+@media (min-width: 400px) {
+  .melody-card {
+    padding: 32px 28px 36px;
+  }
+  .melody-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .melody-head {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .melody-title-block {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .melody-wrap {
+    padding: 40px 24px 56px;
+  }
+  .melody-card h1,
+  .melody-facts h2 {
+    font-size: 2rem;
+  }
+  .melody-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .melody-card {
+    max-width: 720px;
+    padding: 40px 40px 44px;
+  }
+  .melody-nav {
+    padding: 20px 24px;
+  }
+}
