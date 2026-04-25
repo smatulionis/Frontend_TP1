@@ -1,13 +1,23 @@
-/* Tarjeta — Melody Amaro (TP1) */
+/* Tarjeta — Melody Amaro (TP1) — #9AC4F8 · #99EDCC · #FFC09F */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600&display=swap");
 
 :root {
-  --m-bg: #0f0e12;
-  --m-surface: #1a1822;
-  --m-text: #f4f0fa;
-  --m-muted: #a89bc4;
-  --m-accent: #c9a0ff;
-  --m-border: rgba(201, 160, 255, 0.25);
+  --m-blue: #9ac4f8;
+  --m-mint: #99edcc;
+  --m-rose: #ffc09f;
+  --m-jet: #534541;
+  --m-teal: var(--m-rose);
+  --m-sky: var(--m-blue);
+  --m-lavender: #f4fbfa;
+  --m-white: #ffffff;
+  --m-ink: var(--m-jet);
+  --m-deep: #6e4a42;
+  --m-surface: #ffffff;
+  --m-surface-tint: #eef8f5;
+  --m-text: var(--m-jet);
+  --m-muted: var(--m-deep);
+  --m-accent: var(--m-mint);
+  --m-border: rgba(83, 69, 65, 0.16);
   --m-radius: 16px;
 }
 
@@ -20,7 +30,7 @@ body.melody-page {
   min-height: 100vh;
   font-family: "DM Sans", system-ui, sans-serif;
   color: var(--m-text);
-  background: radial-gradient(ellipse 120% 80% at 50% 0%, #2a1f3d 0%, var(--m-bg) 55%);
+  background: linear-gradient(165deg, #c5f5e8 0%, #dceef9 50%, #fffefc 100%);
 }
 
 .melody-skip {
@@ -38,8 +48,9 @@ body.melody-page {
   height: auto;
   padding: 8px 12px;
   z-index: 10;
-  background: var(--m-accent);
-  color: #1a0f2e;
+  background: #ffffff;
+  color: var(--m-ink);
+  border: 2px solid var(--m-rose);
   border-radius: 8px;
 }
 
@@ -52,36 +63,54 @@ body.melody-page {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  border-bottom: 1px solid var(--m-border);
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 3px solid var(--m-mint);
+  box-shadow: 0 4px 20px rgba(83, 69, 65, 0.05);
 }
 
 .melody-nav a {
-  color: var(--m-muted);
+  color: var(--m-jet);
   text-decoration: none;
   font-weight: 500;
   padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(83, 69, 65, 0.12);
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 .melody-nav a:hover,
 .melody-nav a:focus-visible {
-  color: var(--m-text);
-  border-color: var(--m-border);
-  background: rgba(201, 160, 255, 0.08);
+  color: var(--m-jet);
+  border-color: var(--m-rose);
+  background: var(--m-blue);
   outline: none;
 }
 .melody-nav .melody-back {
-  background: var(--m-accent);
-  color: #1a0f2e;
-  font-weight: 600;
+  background: var(--m-rose);
+  color: var(--m-jet);
+  font-weight: 700;
+  border: 2px solid #e8a080;
+  padding: 12px 22px;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(200, 120, 90, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 .melody-nav .melody-back:hover {
-  background: #dcc4ff;
+  transform: translateY(-2px);
+  background: #ffad88;
+  color: var(--m-jet);
+  border-color: var(--m-mint);
+  box-shadow: 0 6px 20px rgba(200, 100, 70, 0.18);
+}
+.melody-nav .melody-back:focus-visible {
+  outline: 3px solid var(--m-blue);
+  outline-offset: 3px;
 }
 .melody-nav-label {
-  color: var(--m-muted);
-  font-size: 0.9rem;
+  color: var(--m-deep);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .melody-wrap {
@@ -94,27 +123,37 @@ body.melody-page {
   max-width: 640px;
   margin: 0 auto;
   background: var(--m-surface);
-  border: 1px solid var(--m-border);
+  border: 2px solid var(--m-border);
   border-radius: var(--m-radius);
+  border-left: 10px solid var(--m-rose);
   padding: 28px 24px 32px;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 16px 40px rgba(83, 69, 65, 0.07), 0 0 0 1px rgba(153, 237, 204, 0.65);
 }
 
-.melody-card h1,
-.melody-facts h2 {
+.melody-card h1 {
   font-family: "Fraunces", Georgia, serif;
   font-weight: 600;
   font-variation-settings: "opsz" 72;
   margin: 0 0 8px;
   font-size: 1.75rem;
-  color: var(--m-text);
+  color: var(--m-ink);
+}
+
+.melody-facts > h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-variation-settings: "opsz" 72;
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+  color: var(--m-ink);
 }
 
 .melody-tagline {
-  color: var(--m-muted);
+  color: var(--m-deep);
   font-size: 0.95rem;
   margin: 0 0 20px;
-  line-height: 1.5;
+  line-height: 1.55;
+  font-weight: 500;
 }
 
 .melody-head {
@@ -131,8 +170,8 @@ body.melody-page {
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--m-accent);
-  box-shadow: 0 8px 24px rgba(201, 160, 255, 0.25);
+  border: 4px solid var(--m-mint);
+  box-shadow: 0 0 0 3px var(--m-blue), 0 10px 24px rgba(83, 69, 65, 0.08);
 }
 
 .melody-grid {
@@ -150,11 +189,11 @@ body.melody-page {
 .melody-block h2 {
   font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--m-muted);
+  letter-spacing: 0.08em;
+  color: var(--m-ink);
   margin: 0 0 8px;
   font-family: "DM Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .melody-block p,
@@ -175,26 +214,29 @@ body.melody-page {
 
 .melody-pill {
   display: inline-block;
-  background: rgba(201, 160, 255, 0.12);
-  border: 1px solid var(--m-border);
+  background: var(--m-mint);
+  color: var(--m-jet);
+  border: 1px solid rgba(255, 192, 159, 0.65);
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
 #melody-details {
   margin-top: 8px;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.2);
+  padding: 16px 16px 16px 20px;
+  background: var(--m-surface-tint);
   border-radius: 12px;
-  border: 1px solid var(--m-border);
+  border: 2px solid rgba(83, 69, 65, 0.1);
+  border-left: 6px solid var(--m-blue);
 }
 #melody-details[hidden] {
   display: none;
 }
 #melody-details p {
   margin: 0 0 8px;
-  color: var(--m-muted);
+  color: var(--m-deep);
   font-size: 0.95rem;
 }
 #melody-details p:last-child {
@@ -227,7 +269,7 @@ body.melody-page {
 .melody-details-list {
   margin: 0;
   padding-left: 1.15rem;
-  color: var(--m-muted);
+  color: var(--m-deep);
   font-size: 0.92rem;
   line-height: 1.55;
 }
@@ -242,7 +284,7 @@ body.melody-page {
 
 .melody-details-block p {
   margin: 0;
-  color: var(--m-muted);
+  color: var(--m-deep);
   font-size: 0.92rem;
   line-height: 1.55;
 }
@@ -269,44 +311,86 @@ body.melody-page {
 .melody-btn {
   font-family: inherit;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  border: none;
+  border: 2px solid #e8a080;
   padding: 12px 22px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #b388ff, #7c4dff);
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(124, 77, 255, 0.4);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: var(--m-rose);
+  color: var(--m-jet);
+  box-shadow: 0 4px 14px rgba(200, 120, 90, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 .melody-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(124, 77, 255, 0.5);
+  transform: translateY(-2px);
+  background: #ffad88;
+  color: var(--m-jet);
+  border-color: var(--m-mint);
+  box-shadow: 0 6px 20px rgba(200, 100, 70, 0.18);
 }
 .melody-btn:focus-visible {
-  outline: 2px solid var(--m-accent);
+  outline: 3px solid var(--m-blue);
   outline-offset: 3px;
 }
 body.melody-theme-day .melody-btn {
-  background: linear-gradient(135deg, #5b4d6e, #3d2f55);
-  box-shadow: none;
+  background: var(--m-rose);
+  color: var(--m-jet);
+  border-color: var(--m-blue);
+  box-shadow: 0 4px 12px rgba(83, 69, 65, 0.1);
+}
+body.melody-theme-day .melody-btn:hover {
+  background: #ffad88;
+  color: var(--m-jet);
+  border-color: var(--m-mint);
 }
 
-/* Modo claro (JS) */
+/* Modo claro (JS) — al expandir "más" */
 body.melody-theme-day {
-  --m-bg: #f5f0ff;
   --m-surface: #ffffff;
-  --m-text: #1c1530;
-  --m-muted: #5c4d6e;
-  --m-accent: #6b4c9a;
-  --m-border: rgba(27, 20, 45, 0.12);
-  background: radial-gradient(ellipse 120% 80% at 50% 0%, #e8dfff 0%, var(--m-bg) 55%);
+  --m-surface-tint: #e8f5fc;
+  --m-text: var(--m-jet);
+  --m-muted: var(--m-deep);
+  --m-border: rgba(83, 69, 65, 0.1);
+  background: linear-gradient(180deg, var(--m-mint) 0%, var(--m-blue) 42%, var(--m-white) 100%);
 }
 body.melody-theme-day .melody-card {
-  box-shadow: 0 16px 40px rgba(80, 60, 120, 0.12);
+  background: var(--m-surface-tint);
+  box-shadow: 0 18px 44px rgba(83, 69, 65, 0.05), 0 0 0 1px rgba(154, 196, 248, 0.45);
+}
+body.melody-theme-day .melody-nav {
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 3px solid var(--m-rose);
+}
+body.melody-theme-day .melody-nav a {
+  color: var(--m-jet);
+  border-color: rgba(83, 69, 65, 0.1);
+}
+body.melody-theme-day .melody-nav a:hover,
+body.melody-theme-day .melody-nav a:focus-visible {
+  color: var(--m-jet);
+  background: var(--m-mint);
+  border-color: var(--m-rose);
+}
+body.melody-theme-day .melody-nav .melody-back {
+  background: var(--m-rose);
+  color: var(--m-jet);
+  border: 2px solid var(--m-blue);
+  box-shadow: 0 4px 12px rgba(83, 69, 65, 0.1);
+}
+body.melody-theme-day .melody-nav .melody-back:hover {
+  transform: translateY(-2px);
+  background: #ffad88;
+  color: var(--m-jet);
+  border-color: var(--m-mint);
+}
+body.melody-theme-day .melody-nav-label {
+  color: var(--m-deep);
+  opacity: 1;
 }
 body.melody-theme-day #melody-details {
-  background: rgba(107, 76, 154, 0.08);
+  background: var(--m-surface-tint);
+  border: 2px solid rgba(83, 69, 65, 0.07);
+  border-left: 6px solid var(--m-rose);
 }
 
 /* —— Breakpoints consigna —— */
@@ -333,7 +417,7 @@ body.melody-theme-day #melody-details {
     padding: 40px 24px 56px;
   }
   .melody-card h1,
-  .melody-facts h2 {
+  .melody-facts > h2 {
     font-size: 2rem;
   }
   .melody-photo {
