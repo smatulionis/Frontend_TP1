@@ -1,19 +1,18 @@
-/* Tarjeta - Sebastian Matulionis (TP1) - Azul marino / Turquesa / Coral */
+/* Tarjeta - Sebastian Matulionis (TP1) - basada en la presentacion de Melody */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600&display=swap");
 
 :root {
-  --s-navy: #1f2a1f;
-  --s-teal: #7a9b3a;
-  --s-coral: #d9772f;
-  --s-sky: #f3ead2;
-  --s-ice: #fbf7ef;
-  --s-ink: #1f2a1f;
-  --s-deep: #5f6148;
+  --s-blue: #9ac4f8;
+  --s-mint: #99edcc;
+  --s-rose: #ffc09f;
+  --s-jet: #534541;
+  --s-ink: var(--s-jet);
+  --s-deep: #6e4a42;
   --s-surface: #ffffff;
-  --s-surface-tint: #fbf4e6;
-  --s-text: #1f2a1f;
-  --s-muted: #6a674f;
-  --s-border: rgba(31, 42, 31, 0.14);
+  --s-surface-tint: #eef8f5;
+  --s-text: var(--s-jet);
+  --s-muted: var(--s-deep);
+  --s-border: rgba(83, 69, 65, 0.16);
   --s-radius: 16px;
 }
 
@@ -26,7 +25,7 @@ body.sebastian-page {
   min-height: 100vh;
   font-family: "DM Sans", system-ui, sans-serif;
   color: var(--s-text);
-  background: linear-gradient(165deg, #efe2c1 0%, #f8f0de 45%, #ffffff 100%);
+  background: linear-gradient(165deg, #c5f5e8 0%, #dceef9 50%, #fffefc 100%);
 }
 
 .sebastian-skip {
@@ -47,7 +46,7 @@ body.sebastian-page {
   z-index: 10;
   background: #ffffff;
   color: var(--s-ink);
-  border: 2px solid var(--s-teal);
+  border: 2px solid var(--s-rose);
   border-radius: 8px;
 }
 
@@ -60,9 +59,9 @@ body.sebastian-page {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.94);
-  border-bottom: 3px solid var(--s-coral);
-  box-shadow: 0 4px 20px rgba(31, 42, 31, 0.07);
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 3px solid var(--s-mint);
+  box-shadow: 0 4px 20px rgba(83, 69, 65, 0.05);
 }
 
 .sebastian-nav a {
@@ -71,39 +70,39 @@ body.sebastian-page {
   font-weight: 500;
   padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(24, 49, 79, 0.12);
+  border: 1px solid rgba(83, 69, 65, 0.12);
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
 .sebastian-nav a:hover,
 .sebastian-nav a:focus-visible {
   color: var(--s-ink);
-  border-color: var(--s-teal);
-  background: var(--s-sky);
+  border-color: var(--s-rose);
+  background: var(--s-blue);
   outline: none;
 }
 
-.sebastian-back {
-  background: var(--s-teal);
+.sebastian-nav .sebastian-back {
+  background: var(--s-rose);
   color: var(--s-ink);
   font-weight: 700;
-  border: 2px solid #5d7f27;
+  border: 2px solid #e8a080;
   padding: 12px 22px;
   border-radius: 999px;
-  box-shadow: 0 4px 14px rgba(122, 155, 58, 0.22);
+  box-shadow: 0 4px 14px rgba(200, 120, 90, 0.22);
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
-.sebastian-back:hover {
+.sebastian-nav .sebastian-back:hover {
   transform: translateY(-2px);
-  background: #8dad4f;
+  background: #ffad88;
   color: var(--s-ink);
-  border-color: var(--s-coral);
-  box-shadow: 0 6px 20px rgba(122, 155, 58, 0.18);
+  border-color: var(--s-mint);
+  box-shadow: 0 6px 20px rgba(200, 100, 70, 0.18);
 }
 
-.sebastian-back:focus-visible {
-  outline: 3px solid var(--s-teal);
+.sebastian-nav .sebastian-back:focus-visible {
+  outline: 3px solid var(--s-blue);
   outline-offset: 3px;
 }
 
@@ -127,9 +126,9 @@ body.sebastian-page {
   background: var(--s-surface);
   border: 2px solid var(--s-border);
   border-radius: var(--s-radius);
-  border-left: 10px solid var(--s-teal);
+  border-left: 10px solid var(--s-rose);
   padding: 28px 24px 32px;
-  box-shadow: 0 16px 40px rgba(31, 42, 31, 0.08), 0 0 0 1px rgba(122, 155, 58, 0.35);
+  box-shadow: 0 16px 40px rgba(83, 69, 65, 0.07), 0 0 0 1px rgba(153, 237, 204, 0.65);
 }
 
 .sebastian-card h1,
@@ -165,8 +164,8 @@ body.sebastian-page {
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--s-coral);
-  box-shadow: 0 0 0 3px var(--s-sky), 0 10px 24px rgba(24, 49, 79, 0.08);
+  border: 4px solid var(--s-mint);
+  box-shadow: 0 0 0 3px var(--s-blue), 0 10px 24px rgba(83, 69, 65, 0.08);
 }
 
 .sebastian-grid {
@@ -187,7 +186,7 @@ body.sebastian-page {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--s-coral);
+  color: var(--s-ink);
   margin: 0 0 8px;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
@@ -211,9 +210,9 @@ body.sebastian-page {
 
 .sebastian-pill {
   display: inline-block;
-  background: var(--s-ice);
+  background: var(--s-mint);
   color: var(--s-ink);
-  border: 1px solid rgba(122, 155, 58, 0.42);
+  border: 1px solid rgba(255, 192, 159, 0.65);
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 0.9rem;
@@ -225,8 +224,8 @@ body.sebastian-page {
   padding: 16px 16px 16px 20px;
   background: var(--s-surface-tint);
   border-radius: 12px;
-  border: 2px solid rgba(31, 42, 31, 0.08);
-  border-left: 6px solid var(--s-coral);
+  border: 2px solid rgba(83, 69, 65, 0.1);
+  border-left: 6px solid var(--s-blue);
 }
 
 .sebastian-details p {
@@ -296,65 +295,65 @@ body.sebastian-page {
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
-  border: 2px solid #e56f4f;
+  border: 2px solid #e8a080;
   padding: 12px 22px;
   border-radius: 999px;
-  background: var(--s-coral);
+  background: var(--s-rose);
   color: var(--s-ink);
-  box-shadow: 0 4px 14px rgba(255, 138, 101, 0.24);
+  box-shadow: 0 4px 14px rgba(200, 120, 90, 0.22);
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .sebastian-btn:hover {
   transform: translateY(-2px);
-  background: #ff9a79;
+  background: #ffad88;
   color: var(--s-ink);
-  border-color: var(--s-teal);
-  box-shadow: 0 6px 20px rgba(255, 138, 101, 0.2);
+  border-color: var(--s-mint);
+  box-shadow: 0 6px 20px rgba(200, 100, 70, 0.18);
 }
 
 .sebastian-btn:focus-visible {
-  outline: 3px solid var(--s-teal);
+  outline: 3px solid var(--s-blue);
   outline-offset: 3px;
 }
 
 body.sebastian-theme-day {
-  --s-surface: #fffdf7;
-  --s-surface-tint: #f6f0dd;
-  --s-border: rgba(31, 42, 31, 0.08);
-  background: linear-gradient(180deg, #efe2c1 0%, #fbf4e5 42%, #ffffff 100%);
+  --s-surface: #ffffff;
+  --s-surface-tint: #e8f5fc;
+  --s-border: rgba(83, 69, 65, 0.1);
+  background: linear-gradient(180deg, var(--s-mint) 0%, var(--s-blue) 42%, #ffffff 100%);
 }
 
 body.sebastian-theme-day .sebastian-card {
   background: var(--s-surface-tint);
-  box-shadow: 0 18px 44px rgba(31, 42, 31, 0.05), 0 0 0 1px rgba(122, 155, 58, 0.28);
+  box-shadow: 0 18px 44px rgba(83, 69, 65, 0.05), 0 0 0 1px rgba(154, 196, 248, 0.45);
 }
 
 body.sebastian-theme-day .sebastian-nav {
   background: rgba(255, 255, 255, 0.98);
-  border-bottom: 3px solid var(--s-teal);
+  border-bottom: 3px solid var(--s-rose);
 }
 
 body.sebastian-theme-day .sebastian-nav a:hover,
 body.sebastian-theme-day .sebastian-nav a:focus-visible {
-  background: var(--s-sky);
-  border-color: var(--s-coral);
+  background: var(--s-mint);
+  border-color: var(--s-rose);
 }
 
-body.sebastian-theme-day .sebastian-back {
-  border-color: #5d7f27;
-  box-shadow: 0 4px 12px rgba(24, 49, 79, 0.1);
+body.sebastian-theme-day .sebastian-nav .sebastian-back {
+  border-color: var(--s-blue);
+  box-shadow: 0 4px 12px rgba(83, 69, 65, 0.1);
 }
 
-body.sebastian-theme-day .sebastian-back:hover {
-  background: #8dad4f;
-  border-color: var(--s-coral);
+body.sebastian-theme-day .sebastian-nav .sebastian-back:hover {
+  background: #ffad88;
+  border-color: var(--s-mint);
 }
 
 body.sebastian-theme-day .sebastian-details {
   background: var(--s-surface-tint);
-  border: 2px solid rgba(31, 42, 31, 0.06);
-  border-left: 6px solid var(--s-teal);
+  border: 2px solid rgba(83, 69, 65, 0.07);
+  border-left: 6px solid var(--s-rose);
 }
 
 @media (min-width: 400px) {
