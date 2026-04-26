@@ -5,89 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Frontend - Equipo</title>
-
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="home-page">
+    <a class="home-skip" href="#contenido-principal">Ir al contenido</a>
 
-    <header>
-        <h1>Nombre del Equipo</h1>
+    <header class="home-nav" role="banner">
+        <span class="home-nav-label">Proyecto Frontend</span>
+        <nav class="home-nav-links" aria-label="Menú principal">
+            <a href="#contenido-principal">Inicio</a>
+            <a href="#equipo-titulo">Equipo</a>
+            <a href="bitacora.html">Bitácora</a>
+        </nav>
+        <span class="home-nav-meta">Equipo N° 6</span>
     </header>
 
-    <main>
+    <main class="home-wrap" id="contenido-principal">
+        <article class="home-card home-card--intro" aria-labelledby="titulo-principal">
+            <div class="home-head">
+                <div class="home-title-block">
+                    <p class="home-kicker">Tecnicatura en Desarrollo de Software</p>
+                    <h1 id="titulo-principal">Equipo N° 6</h1>
+                    <p class="home-tagline">
+                        Somos un grupo de estudiantes enfocados en crear interfaces claras, humanas y bien organizadas
+                        con HTML y CSS. Este proyecto reúne perfiles distintos dentro de una misma identidad visual.
+                    </p>
+                </div>
+            </div>
 
-        <section class="presentacion">
-            <h2>Sobre nuestro equipo</h2>
-            <p>
-                Somos un equipo de estudiantes de la Tecnicatura en Desarrollo de Software enfocados en
-                crear soluciones modernas utilizando HTML, CSS y JavaScript.
-                Este proyecto tiene como objetivo aplicar y consolidar los conocimientos adquiridos en la materia
-                Frontend mediante el desarrollo de un sitio web utilizando HTML, CSS y JavaScript. A través de este
-                trabajo buscamos poner en práctica conceptos fundamentales como la estructura semántica de una página
-                web, el diseño visual mediante estilos y la incorporación de interactividad con JavaScript.
+            <div class="home-meta-grid" aria-label="Resumen del proyecto">
+                <div class="home-meta-block">
+                    <h2>Enfoque</h2>
+                    <p>Diseño de interfaces, estructura semántica y presentaciones personales.</p>
+                </div>
+                <div class="home-meta-block">
+                    <h2>Herramientas</h2>
+                    <p>HTML, CSS y JavaScript aplicado con una base visual compartida.</p>
+                </div>
+            </div>
+        </article>
 
-                Además, el proyecto nos permite trabajar de manera colaborativa, organizando tareas entre los
-                integrantes del equipo y utilizando buenas prácticas de desarrollo. El propósito principal es construir
-                una base sólida en el desarrollo de interfaces web modernas, priorizando la claridad del código, la
-                experiencia del usuario y la correcta organización del proyecto.
+        <section class="home-card home-card--bitacora" aria-labelledby="bitacora-titulo">
+            <div class="home-section-head">
+                <h2 id="bitacora-titulo">Bitácora del proyecto</h2>
+                <p>Registro breve del proceso de trabajo, los cambios de rumbo y las decisiones que fueron dando forma al sitio.</p>
+            </div>
+
+            <p class="home-bitacora-link">
+                <a href="bitacora.html">Ver la bitácora completa</a>
             </p>
         </section>
 
-        <section class="equipo">
+        <section class="home-card home-card--team" aria-labelledby="equipo-titulo">
+            <div class="home-section-head">
+                <h2 id="equipo-titulo">Nuestro Equipo</h2>
+      
+            </div>
 
-    <h2>Nuestro Equipo</h2>
+            <div class="team-grid">
+                <a href="integrantes/sebastianv.html" class="team-card team-card--sage">
+                    <img src="img/fotoSebasV.jpg" alt="Sebastián Vitcop">
+                    <div class="team-card-body">
+                        <h3>Sebastián Vitcop</h3>
+                        <p>Data &amp; Frontend</p>
+                    </div>
+                </a>
 
-    <div class="team-container">
+                <a href="integrantes/sebastian.html" class="team-card team-card--olive">
+                    <img src="img/avatar_sebastian.png" alt="Sebastián Matulionis">
+                    <div class="team-card-body">
+                        <h3>Sebastián Matulionis</h3>
+                        <p>Frontend Developer</p>
+                    </div>
+                </a>
 
-        <a href="integrantes/juan.html" class="team-card">
-            <img src="img/juan.jpg" alt="Juan Perez">
-            <h3>Juan Pérez</h3>
-            <p>Desarrollo Frontend</p>
-        </a>
-
-        <a href="integrantes/sebastianv.html" class="team-card">
-            <img src="img/fotoSebasV.jpg" alt="Sebastián Vitcop">
-            <h3>Sebastián Vitcop</h3>
-            <p>Data & Frontend</p>
-        </a>
-
-        <a href="integrantes/maria.html" class="team-card">
-            <img src="img/maria.jpg" alt="Maria Lopez">
-            <h3>María López</h3>
-            <p>Diseño UI</p>
-        </a>
-
-        <a href="integrantes/pedro.html" class="team-card">
-            <img src="img/pedro.jpg" alt="Pedro Gomez">
-            <h3>Pedro Gómez</h3>
-            <p>JavaScript</p>
-        </a>
-
-        <a href="integrantes/sebastian.html" class="team-card">
-            <img src="img/avatar_sebastian.png" alt="Sebastián Matulionis">
-            <h3>Sebastián Matulionis</h3>
-            <p>Frontend Developer</p>
-        </a>
-
-        <a href="integrantes/melody.html" class="team-card team-card--melody">
-            <img src="img/melody-avatar.png" alt="Melody Amaro">
-            <h3>Melody Amaro</h3>
-            <p>Desarrollo web</p>
-        </a>
-
-    </div>
-
-</section>
-
+                <a href="integrantes/melody.html" class="team-card team-card--melody">
+                    <img src="img/melody-avatar.png" alt="Melody Amaro">
+                    <div class="team-card-body">
+                        <h3>Melody Amaro</h3>
+                        <p>Desarrollo web</p>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <footer class="home-footer">
         <p>Proyecto Frontend - 2026</p>
     </footer>
-
-    <script src="js/script.js"></script>
-
 </body>
 
 </html>

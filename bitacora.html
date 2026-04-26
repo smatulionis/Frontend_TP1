@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora - Proyecto Frontend</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="home-page bitacora-page">
+    <a class="home-skip" href="#contenido-bitacora">Ir al contenido</a>
+
+    <header class="home-nav bitacora-nav" role="banner">
+        <span class="home-nav-label">Bitácora del proyecto</span>
+        <a class="bitacora-back-btn" href="index.html">← Volver a la portada</a>
+    </header>
+
+    <main class="home-wrap" id="contenido-bitacora">
+        <article class="home-card home-card--intro" aria-labelledby="bitacora-principal">
+            <div class="home-head">
+                <div class="home-title-block">
+                    <h1 id="bitacora-principal">Bitácora del proyecto</h1>
+                    <p class="home-tagline">
+                        Esta sección reúne el recorrido de trabajo del sitio: cómo se tomaron decisiones, qué
+                        dificultades aparecieron y qué cambios terminaron mejorando el resultado final.
+                    </p>
+                </div>
+            </div>
+
+            <div class="home-meta-grid" aria-label="Resumen de la bitácora">
+                <div class="home-meta-block">
+                    <h2>Objetivo</h2>
+                    <p>Documentar la evolución del proyecto y dejar registro de las decisiones del equipo.</p>
+                </div>
+                <div class="home-meta-block">
+                    <h2>Alcance</h2>
+                    <p>Diseño visual, organización del contenido, estructura HTML y coherencia entre páginas.</p>
+                </div>
+            </div>
+        </article>
+
+        <section class="home-card home-card--bitacora" aria-labelledby="bitacora-desarrollo">
+            <div class="home-section-head">
+                <h2 id="bitacora-desarrollo">Desarrollo del proyecto</h2>
+  
+            </div>
+
+            <div class="bitacora-timeline">
+                <section class="bitacora-entry">
+                    <h3>1. Primeras decisiones de diseño</h3>
+                    <p>
+                        Al comienzo se definió que cada integrante tendría una página propia con una identidad
+                        visual personalizada, pero todas compartirían una misma estructura base. Para la portada se
+                        eligió una composición más neutral, para que funcionara como punto de entrada y no compitiera
+                        con las páginas individuales.
+                    </p>
+                </section>
+
+                <section class="bitacora-entry">
+                    <h3>2. Dificultades encontradas</h3>
+                    <p>
+                        La principal dificultad fue evitar que todo se viera demasiado parecido. Había mucha
+                        repetición de colores y pesos visuales, por lo que se fue ajustando cada ficha con bordes,
+                        fondos y paletas diferentes. También hubo que ordenar mejor las jerarquías tipográficas para
+                        que la lectura fuera más clara en móviles.
+                    </p>
+                </section>
+
+                <section class="bitacora-entry">
+                    <h3>3. Resoluciones aplicadas</h3>
+                    <p>
+                        Se simplificaron las estructuras de algunas páginas, se corrigieron enlaces y se unificaron
+                        los estilos de encabezados, botones y tarjetas. Además, se revisaron imágenes y nombres de
+                        archivos para que el sitio quedara consistente y no dependiera de soluciones improvisadas.
+                    </p>
+                </section>
+
+                <section class="bitacora-entry bitacora-entry--full">
+                    <h3>4. Cambios importantes durante la implementación</h3>
+                    <p>
+                        A medida que avanzó el trabajo, la portada pasó de ser una grilla genérica a una tarjeta de
+                        presentación con acceso directo a la bitácora y a los perfiles. También se incorporaron
+                        páginas individuales más completas, una identidad visual distinta para cada integrante y una
+                        organización más clara del contenido para que el proyecto se sintiera coherente de punta a
+                        punta.
+                    </p>
+                </section>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="home-footer">
+        <p>Proyecto Frontend - 2026</p>
+    </footer>
+</body>
+
+</html>
