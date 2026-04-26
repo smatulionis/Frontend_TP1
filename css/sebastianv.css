@@ -1,20 +1,16 @@
-/* Tarjeta — Sebastián Vitcop (TP1) */
+/* Tarjeta — Sebastián Vitcop (TP1) — paleta Melody: #9AC4F8 · #99EDCC · #FFC09F */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600&display=swap");
 
 :root {
-    --sv-dark: #1a1a2e;
-    --sv-mid: #16213e;
-    --sv-accent: #0f3460;
-    --sv-highlight: #e94560;
-    --sv-text: #eaeaea;
-    --sv-muted: #a0a8c0;
-    --sv-card-bg: #ffffff;
-    --sv-card-text: #1a1a2e;
-    --sv-pill-bg: #eef2ff;
-    --sv-pill-border: #c7d2fe;
-    --sv-pill-text: #1a1a2e;
-    --sv-border: rgba(26, 26, 46, 0.12);
-    --sv-radius: 16px;
+    --sv-blue:    #9ac4f8;
+    --sv-mint:    #99edcc;
+    --sv-rose:    #ffc09f;
+    --sv-jet:     #534541;
+    --sv-deep:    #6e4a42;
+    --sv-surface: #ffffff;
+    --sv-surface-tint: #eef8f5;
+    --sv-border:  rgba(83, 69, 65, 0.16);
+    --sv-radius:  16px;
 }
 
 * {
@@ -25,8 +21,8 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: "DM Sans", system-ui, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    color: var(--sv-card-text);
+    color: var(--sv-jet);
+    background: linear-gradient(165deg, #c5f5e8 0%, #dceef9 50%, #fffefc 100%);
 }
 
 /* ── Header ── */
@@ -39,37 +35,43 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
-    background: rgba(255, 255, 255, 0.95);
-    border-bottom: 3px solid var(--sv-highlight);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 3px solid var(--sv-mint);
+    box-shadow: 0 4px 20px rgba(83, 69, 65, 0.05);
 }
 
 .sv-header-label {
     font-size: 0.72rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--sv-accent);
+    letter-spacing: 0.04em;
+    color: var(--sv-deep);
 }
 
 .sv-back-btn {
     text-decoration: none;
     font-family: "DM Sans", sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     font-weight: 700;
-    color: var(--sv-card-bg);
-    background: var(--sv-highlight);
-    padding: 10px 20px;
+    color: var(--sv-jet);
+    background: var(--sv-rose);
+    padding: 12px 22px;
     border-radius: 999px;
-    border: 2px solid #c73250;
-    box-shadow: 0 4px 14px rgba(233, 69, 96, 0.3);
+    border: 2px solid #e8a080;
+    box-shadow: 0 4px 14px rgba(200, 120, 90, 0.22);
     transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .sv-back-btn:hover {
     transform: translateY(-2px);
-    background: #c73250;
-    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
+    background: #ffad88;
+    border-color: var(--sv-mint);
+    box-shadow: 0 6px 20px rgba(200, 100, 70, 0.18);
+}
+
+.sv-back-btn:focus-visible {
+    outline: 3px solid var(--sv-blue);
+    outline-offset: 3px;
 }
 
 /* ── Main ── */
@@ -81,13 +83,14 @@ body {
 
 /* ── Card ── */
 .sv-card {
-    max-width: 680px;
+    max-width: 640px;
     margin: 0 auto;
-    background: var(--sv-card-bg);
+    background: var(--sv-surface);
+    border: 2px solid var(--sv-border);
     border-radius: var(--sv-radius);
-    border-left: 10px solid var(--sv-highlight);
+    border-left: 10px solid var(--sv-rose);
     padding: 28px 24px 32px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(233, 69, 96, 0.2);
+    box-shadow: 0 16px 40px rgba(83, 69, 65, 0.07), 0 0 0 1px rgba(153, 237, 204, 0.65);
 }
 
 /* ── Top: foto + nombre ── */
@@ -97,48 +100,54 @@ body {
     align-items: center;
     text-align: center;
     gap: 16px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
 .sv-photo {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--sv-highlight);
-    box-shadow: 0 0 0 3px #c7d2fe, 0 10px 28px rgba(0, 0, 0, 0.15);
+    object-fit: contain;      /* contain en lugar de cover para respetar el círculo ya recortado */
+    object-position: center;
+    border: 4px solid var(--sv-mint);
+    box-shadow: 0 0 0 3px var(--sv-blue), 0 10px 24px rgba(83, 69, 65, 0.08);
     display: block;
+    flex-shrink: 0;
+    background: transparent;
 }
 
 .sv-title-block h1 {
     font-family: "Fraunces", Georgia, serif;
-    font-weight: 700;
-    font-size: 1.7rem;
-    margin: 0 0 10px;
-    color: var(--sv-card-text);
+    font-weight: 600;
+    font-variation-settings: "opsz" 72;
+    font-size: 1.75rem;
+    margin: 0 0 8px;
+    color: var(--sv-jet);
 }
 
 .sv-tagline {
-    color: #4a5568;
-    font-size: 0.93rem;
-    line-height: 1.6;
+    color: var(--sv-deep);
+    font-size: 0.95rem;
+    line-height: 1.55;
     margin: 0;
+    font-weight: 500;
 }
 
 /* ── Sections ── */
 .sv-section {
-    margin-top: 24px;
+    margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid var(--sv-border);
 }
 
 .sv-section h2 {
-    font-family: "DM Sans", sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--sv-highlight);
-    margin: 0 0 12px;
+    letter-spacing: 0.08em;
+    color: var(--sv-jet);
+    margin: 0 0 10px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
 }
 
 .sv-data-row {
@@ -148,18 +157,19 @@ body {
 }
 
 .sv-data-block h2 {
-    font-family: "DM Sans", sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--sv-highlight);
+    letter-spacing: 0.08em;
+    color: var(--sv-jet);
     margin: 0 0 4px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
 }
 
 .sv-data-block p {
     margin: 0;
     font-weight: 600;
-    color: var(--sv-card-text);
+    color: var(--sv-jet);
     font-size: 0.95rem;
 }
 
@@ -175,62 +185,56 @@ body {
 
 .sv-pill {
     display: inline-block;
-    background: var(--sv-pill-bg);
-    color: var(--sv-pill-text);
-    border: 1px solid var(--sv-pill-border);
-    padding: 6px 14px;
+    background: var(--sv-mint);
+    color: var(--sv-jet);
+    border: 1px solid rgba(255, 192, 159, 0.65);
+    padding: 6px 12px;
     border-radius: 999px;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     font-weight: 600;
-}
-
-.sv-note {
-    font-size: 0.75rem;
-    color: var(--sv-muted);
-    margin: 10px 0 0;
-    font-style: italic;
 }
 
 /* ── Toggle button ── */
 .sv-toggle-wrap {
-    margin-top: 24px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
 
 .sv-btn {
     font-family: "DM Sans", sans-serif;
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     font-weight: 700;
     cursor: pointer;
-    background: var(--sv-highlight);
-    color: #ffffff;
-    border: 2px solid #c73250;
-    padding: 12px 24px;
+    background: var(--sv-rose);
+    color: var(--sv-jet);
+    border: 2px solid #e8a080;
+    padding: 12px 22px;
     border-radius: 999px;
-    box-shadow: 0 4px 14px rgba(233, 69, 96, 0.3);
+    box-shadow: 0 4px 14px rgba(200, 120, 90, 0.22);
     transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .sv-btn:hover {
     transform: translateY(-2px);
-    background: #c73250;
-    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.4);
+    background: #ffad88;
+    border-color: var(--sv-mint);
+    box-shadow: 0 6px 20px rgba(200, 100, 70, 0.18);
 }
 
 .sv-btn:focus-visible {
-    outline: 3px solid #c7d2fe;
+    outline: 3px solid var(--sv-blue);
     outline-offset: 3px;
 }
 
 /* ── Extra section ── */
 .sv-extra {
-    margin-top: 20px;
-    padding: 20px;
-    background: #f8faff;
+    margin-top: 8px;
+    padding: 16px 16px 16px 20px;
+    background: var(--sv-surface-tint);
     border-radius: 12px;
-    border: 2px solid var(--sv-border);
-    border-left: 6px solid var(--sv-accent);
+    border: 2px solid rgba(83, 69, 65, 0.1);
+    border-left: 6px solid var(--sv-blue);
 }
 
 .sv-extra[hidden] {
@@ -238,12 +242,13 @@ body {
 }
 
 .sv-extra > h2 {
-    font-family: "DM Sans", sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--sv-accent);
-    margin: 0 0 16px;
+    letter-spacing: 0.08em;
+    color: var(--sv-jet);
+    margin: 0 0 14px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
 }
 
 .sv-extra-grid {
@@ -254,25 +259,25 @@ body {
 
 .sv-extra-block h3 {
     font-family: "DM Sans", sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--sv-card-text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--sv-jet);
     margin: 0 0 8px;
 }
 
 .sv-extra-block ul {
     margin: 0;
     padding-left: 1.15rem;
-    color: #4a5568;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    color: var(--sv-deep);
+    font-size: 0.92rem;
+    line-height: 1.55;
 }
 
 .sv-extra-block p {
     margin: 0;
-    color: #4a5568;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    color: var(--sv-deep);
+    font-size: 0.92rem;
+    line-height: 1.55;
 }
 
 .sv-extra-block--full {
@@ -319,6 +324,10 @@ body {
 @media (min-width: 1200px) {
     .sv-card {
         max-width: 720px;
-        padding: 40px 44px 44px;
+        padding: 40px 40px 44px;
+    }
+
+    .sv-header {
+        padding: 20px 24px;
     }
 }
