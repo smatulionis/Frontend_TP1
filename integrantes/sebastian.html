@@ -2,70 +2,119 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Sebastián Matulionis</title>
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sebastián Matulionis - Perfil</title>
+  <link rel="stylesheet" href="../css/sebastian.css">
 </head>
 
-<body>
+<body class="sebastian-page">
+  <a class="sebastian-skip" href="#sebastian-contenido">Ir al contenido</a>
 
-    <div class="card-container">
+  <header class="sebastian-nav" role="navigation" aria-label="Navegacion">
+    <span class="sebastian-nav-label">Perfil de integrante</span>
+    <a class="sebastian-back" href="../index.html">← Volver a la portada</a>
+  </header>
 
-        <div class="profile-card">
+  <main class="sebastian-wrap" id="sebastian-contenido">
+    <article class="sebastian-card" aria-labelledby="sebastian-nombre">
+      <div class="sebastian-head">
+        <img
+          class="sebastian-photo"
+          src="../img/avatar_sebastian.png"
+          width="200"
+          height="200"
+          alt="Foto de perfil de Sebastian Matulionis">
+        <div class="sebastian-title-block">
+          <h1 id="sebastian-nombre">Sebastián Matulionis</h1>
+          <p class="sebastian-tagline">
+            Estudiante de desarrollo de software apasionado por la tecnología y el desarrollo web. Disfruto aprender
+            constantemente, experimentar con nuevas herramientas y construir nuevos proyectos.
+          </p>
+        </div>
+      </div>
 
-            <img src="../img/sebastian.jpg" alt="Foto de perfil" class="profile-img">
+      <div class="sebastian-facts" aria-label="Datos basicos">
+        <h2>Datos</h2>
+        <div class="sebastian-grid">
+          <div class="sebastian-block">
+            <h2>Ubicación actual</h2>
+            <p>Buenos Aires, Argentina</p>
+          </div>
+          <div class="sebastian-block">
+            <h2>Edad</h2>
+            <p>31 años</p>
+          </div>
+        </div>
+      </div>
 
-            <h2>Sebastián Matulionis</h2>
+      <div class="sebastian-grid sebastian-grid--facts" aria-label="Habilidades e intereses">
+        <div class="sebastian-block">
+          <h2>Habilidades</h2>
+          <ul>
+            <li><span class="sebastian-pill">HTML</span></li>
+            <li><span class="sebastian-pill">CSS</span></li>
+            <li><span class="sebastian-pill">JavaScript</span></li>
+            <li><span class="sebastian-pill">Git / GitHub</span></li>
+          </ul>
+        </div>
+        <div class="sebastian-block">
+          <h2>Peliculas favoritas</h2>
+          <ul>
+            <li><span class="sebastian-pill">Forrest Gump</span></li>
+            <li><span class="sebastian-pill">Whiplash</span></li>
+            <li><span class="sebastian-pill">Prisoners</span></li>
+          </ul>
+        </div>
+        <div class="sebastian-block sebastian-block--span">
+          <h2>Discos musicales favoritos</h2>
+          <ul>
+            <li><span class="sebastian-pill">Meteora - Linkin Park</span></li>
+            <li><span class="sebastian-pill">(What's The Story) Morning Glory? - Oasis</span></li>
+            <li><span class="sebastian-pill">Hopes And Fears - Keane</span></li>
+          </ul>
+        </div>
+      </div>
 
-            <p class="descripcion">
-                Estudiante de desarrollo de software apasionado por la tecnología y el desarrollo web. Disfruto aprender
-                constantemente, experimentar con nuevas herramientas y construir nuevos proyectos.
-            </p>
+      <div class="sebastian-toggle">
+        <button
+          type="button"
+          class="sebastian-btn"
+          id="sebastian-btn-toggle"
+          aria-expanded="false"
+          aria-controls="sebastian-details">
+          Mostrar más sobre mí
+        </button>
+      </div>
 
-            <div class="info">
-                <p><strong>Ubicación actual</strong></p>
-                <p>Buenos Aires, Argentina</p>
-            </div>
+      <section id="sebastian-details" class="sebastian-details" hidden aria-labelledby="sebastian-extra-title">
+        <h2 id="sebastian-extra-title">Más sobre mí</h2>
 
-            <div class="info">
-                <p><strong>Edad</strong></p>
-                <p>31 años</p>
-            </div>
+        <div class="sebastian-details-grid">
+          <section class="sebastian-details-block" aria-labelledby="sebastian-extra-rutina">
+            <h3 id="sebastian-extra-rutina">Lo que me mantiene enfocado</h3>
+            <ul class="sebastian-details-list">
+              <li>Entrenar y moverme todos los días.</li>
+              <li>Leer sobre tecnología, datos y productividad.</li>
+              <li>Probar herramientas nuevas sin miedo a equivocarme.</li>
+            </ul>
+          </section>
 
-            <div class="info">
-                <p><strong>Habilidades</strong></p>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Git / GitHub</li>
-                </ul>
-            </div>
-
-            <div class="info">
-                <p><strong>Películas favoritas</strong></p>
-                <ul>
-                    <li>Forrest Gump</li>
-                    <li>Whiplash</li>
-                    <li>Prisoners</li>
-                </ul>
-            </div>
-
-            <div class="info">
-                <p><strong>Discos musicales favoritos</strong></p>
-                <ul>
-                    <li>Meteora – Linkin Park</li>
-                    <li>(What's The Story) Morning Glory? – Oasis</li>
-                    <li>Hopes And Fears – Keane</li>
-                </ul>
-            </div>
-
-            <a href="../index.html" class="boton">Volver a la portada</a>
+          <section class="sebastian-details-block" aria-labelledby="sebastian-extra-aprendizaje">
+            <h3 id="sebastian-extra-aprendizaje">Lo que quiero seguir aprendiendo</h3>
+            <ul class="sebastian-details-list">
+              <li>JavaScript para construir interfaces mas dinámicas.</li>
+              <li>Python y SQL para seguir creciendo en el área de datos.</li>
+              <li>Buenas prácticas para trabajar mejor en equipo.</li>
+            </ul>
+          </section>
 
         </div>
+      </section>
+    </article>
+  </main>
 
-    </div>
-
+  <script src="../js/sebastian.js" defer></script>
 </body>
 
 </html>
