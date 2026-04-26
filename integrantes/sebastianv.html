@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastián Vitcop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sebastianv.css">
+</head>
+
+<body>
+
+    <header class="sv-header">
+        <span class="sv-header-label">Perfil de integrante</span>
+        <a href="../index.html" class="sv-back-btn">← Volver a la portada</a>
+    </header>
+
+    <main class="sv-main">
+        <div class="sv-card">
+
+            <!-- Foto + nombre -->
+            <div class="sv-top">
+                <img src="../img/fotoSebasV.jpg" alt="Foto de Sebastián Vitcop" class="sv-photo">
+                <div class="sv-title-block">
+                    <h1>Sebastián Vitcop</h1>
+                    <p class="sv-tagline">
+                        Mi nombre es Sebastián Vitcop. Soy estudiante de la Tecnicatura en Desarrollo Web y apasionado por la tecnología. Me gusta mucho el área de datos y me estoy formando en paralelo con cursos sobre la temática. En un futuro me gustaría trabajar en el sector de Data de alguna empresa. Además, me gusta hacer deporte y pasar tiempo al aire libre.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Datos básicos -->
+            <div class="sv-section">
+                <div class="sv-data-row">
+                    <div class="sv-data-block">
+                        <h2>Ubicación</h2>
+                        <p>Buenos Aires, Argentina</p>
+                    </div>
+                    <div class="sv-data-block">
+                        <h2>Edad</h2>
+                        <p>28 años</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Habilidades -->
+            <div class="sv-section">
+                <h2>Habilidades</h2>
+                <ul class="sv-pills">
+                    <li><span class="sv-pill">HTML</span></li>
+                    <li><span class="sv-pill">CSS</span></li>
+                    <li><span class="sv-pill">JavaScript (inicial)</span></li>
+                    <li><span class="sv-pill">Git / GitHub</span></li>
+                </ul>
+            </div>
+
+            <!-- Películas -->
+            <div class="sv-section">
+                <h2>Películas favoritas</h2>
+                <ul class="sv-pills">
+                    <li><span class="sv-pill">Interstellar</span></li>
+                    <li><span class="sv-pill">The Social Network</span></li>
+                    <li><span class="sv-pill">Moneyball</span></li>
+                </ul>
+            </div>
+
+            <!-- Discos -->
+            <div class="sv-section">
+                <h2>Discos musicales favoritos</h2>
+                <ul class="sv-pills">
+                    <li><span class="sv-pill">Rocks — Aerosmith</span></li>
+                    <li><span class="sv-pill">Honestidad Brutal — Andrés Calamaro</span></li>
+                    <li><span class="sv-pill">Toys in the Attic — Aerosmith</span></li>
+                </ul>
+            </div>
+
+            <!-- Botón mostrar más -->
+            <div class="sv-toggle-wrap">
+                <button
+                    type="button"
+                    class="sv-btn"
+                    id="sv-btn-toggle"
+                    aria-expanded="false"
+                    aria-controls="sv-extra">
+                    Mostrar más sobre mí
+                </button>
+            </div>
+
+            <!-- Sección extra oculta -->
+            <div id="sv-extra" class="sv-extra" hidden>
+                <h2>Más sobre mí</h2>
+                <div class="sv-extra-grid">
+                    <div class="sv-extra-block">
+                        <h3>Hobbies</h3>
+                        <ul>
+                            <li>Jugar al fútbol</li>
+                            <li>Hacer deporte en general</li>
+                            <li>Pasar tiempo al aire libre</li>
+                            <li>Viajar</li>
+                        </ul>
+                    </div>
+                    <div class="sv-extra-block">
+                        <h3>Bandas favoritas</h3>
+                        <ul>
+                            <li>Aerosmith</li>
+                            <li>Andrés Calamaro</li>
+                        </ul>
+                    </div>
+                    <div class="sv-extra-block sv-extra-block--full">
+                        <h3>Objetivos</h3>
+                        <p>Profundizar mis conocimientos en análisis de datos y combinarlos con el desarrollo web para trabajar en el sector de Data. Me interesa seguir aprendiendo herramientas como Python y SQL en paralelo a la tecnicatura.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../js/sebastianv.js" defer></script>
+
+</body>
+</html>
