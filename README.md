@@ -14,7 +14,7 @@ Este trabajo práctico corresponde a la materia Frontend de la Tecnicatura Super
 
 | Nombre | GitHub |
 |---|---|
-| Sebastián Vitcop | _[link al perfil — completar]_ |
+| Sebastián Vitcop | github.com/Sebasvitcop |
 | Sebastián Matulionis | _[link al perfil — completar]_ |
 | Melody Amaro | _[link al perfil — completar]_ |
 | Lucrecia Vigo | _[link al perfil — completar]_ |
