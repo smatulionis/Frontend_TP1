@@ -147,6 +147,7 @@ btnToggle.addEventListener("click", function () {
 
 **Función:** Recomendador por humor.
 Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y feliz) y, al seleccionar uno, despliega un área en la que sugiere una película, un disco musical y una actividad para realizar, relacionándolos con el humor elegido.
+<img width="1143" height="595" alt="image" src="https://github.com/user-attachments/assets/0a243ca0-3080-45e3-800d-141f78d406ae" />
 
 
 ---
