@@ -234,8 +234,7 @@ body {
     background: var(--sv-surface-tint);
     border-radius: 12px;
     border: 2px solid rgba(83, 69, 65, 0.1);
-    border-left: 6px solid var(--sv-blue);
-}
+    border-left: 6px solid var(--sv-rose);}
 
 .sv-extra[hidden] {
     display: none;
