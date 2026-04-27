@@ -104,8 +104,8 @@ body {
 }
 
 .sv-photo {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: contain;      /* contain en lugar de cover para respetar el círculo ya recortado */
     object-position: center;
@@ -316,8 +316,8 @@ body {
     }
 
     .sv-photo {
-        width: 120px;
-        height: 120px;
+        width: 180px;
+        height: 180px;
     }
 }
 

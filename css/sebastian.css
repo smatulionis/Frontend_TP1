@@ -160,8 +160,8 @@ body.sebastian-page {
 }
 
 .sebastian-photo {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--s-mint);
@@ -389,8 +389,8 @@ body.sebastian-theme-day .sebastian-details {
   }
 
   .sebastian-photo {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
   }
 
   .sebastian-details-grid {
