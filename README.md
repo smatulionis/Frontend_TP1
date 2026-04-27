@@ -17,7 +17,7 @@ Este trabajo práctico corresponde a la materia Frontend de la Tecnicatura Super
 | Sebastián Vitcop | github.com/Sebasvitcop |
 | Sebastián Matulionis | _[link al perfil — completar]_ |
 | Melody Amaro | _[link al perfil — completar]_ |
-| Lucrecia Vigo | _[link al perfil — completar]_ |
+| Lucrecia Vigo | https://github.com/LucreLucre |
 
 ---
 
@@ -143,7 +143,9 @@ btnToggle.addEventListener("click", function () {
 ---
 
 ### Lucrecia Vigo (`integrantes/lucrecia.html` + `js/lucrecia.js`)
-
+**Función:** Toggle "Mostrar más sobre mí" adaptada de la realizada por mis compañeros.
+**Función:** Recomendador por humor.
+Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y feliz) y, al seleccionar uno, despliega un área en la que sugiere una película, un disco musical y una actividad para realizar, relacionándolos con el humor elegido.
 
 
 ---
@@ -167,11 +169,15 @@ btnToggle.addEventListener("click", function () {
 
 **Sebastián Vitcop** utilizó Claude como asistente técnico para resolver problemas puntuales durante el desarrollo: ajuste de estilos CSS para lograr la foto circular en la tarjeta del índice, corrección de conflictos con `git stash` y `git pull --rebase`, y consultas sobre cómo aplicar la paleta de colores compartida del equipo a su tarjeta individual. El código y las decisiones de diseño fueron tomadas por el integrante; la IA actuó como guía para resolver dudas específicas.
 
+**Lucrecia Vigo** utilizó Claude (Sonnet 4.6) para crear interactividad js en su tarjeta personal. La misma sugiere una película, un album musical y una actividad según 4 estados de ánimo disponibles para elegir (aventurero, reflexivo, melancólico y feliz). Al seleccionar un estado de ánimo, se despliega un espacio con las sugerencias relacionadas. El código fue generado por la IA, pero integrado a una funcionalidad preexistente por la desarrolladora.
+
 > _[Cada integrante debe completar su propio párrafo aquí]_
 
 ### Imágenes y Avatares
 
 **Sebastián Vitcop:** El avatar fue generado a partir de una foto personal propia. El prompt utilizado fue generar una caricatura animada en estilo ilustración a partir de la foto original.
+
+**Lucrecia Vigo** El avatar fue generado a partir de una foto personal y mostrándole el estilo de los compañeros que ya habían subido su avatar para que copie el estilo. Se usó Claude (Sonnet 4.6).
 
 > _[Cada integrante debe completar el criterio y prompt de su propio avatar aquí]_
 
