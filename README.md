@@ -144,6 +144,7 @@ btnToggle.addEventListener("click", function () {
 
 ### Lucrecia Vigo (`integrantes/lucrecia.html` + `js/lucrecia.js`)
 **Función:** Toggle "Mostrar más sobre mí" adaptada de la realizada por mis compañeros.
+
 **Función:** Recomendador por humor.
 Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y feliz) y, al seleccionar uno, despliega un área en la que sugiere una película, un disco musical y una actividad para realizar, relacionándolos con el humor elegido.
 
