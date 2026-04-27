@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucrecia Vigo - Perfil</title>
+  <link rel="stylesheet" href="../css/lucrecia.css">
+</head>
+
+<body class="lucrecia-page">
+  <a class="lucrecia-skip" href="#lucrecia-contenido">Ir al contenido</a>
+
+  <header class="lucrecia-nav" role="navigation" aria-label="Navegacion">
+    <span class="lucrecia-nav-label">Perfil de integrante</span>
+    <a class="lucrecia-back" href="../index.html">← Volver a la portada</a>
+  </header>
+
+  <main class="lucrecia-wrap" id="lucrecia-contenido">
+    <article class="lucrecia-card" aria-labelledby="lucrecia-nombre">
+      <div class="lucrecia-head">
+        <img
+          class="lucrecia-photo"
+          src="../img/avatar_lucrecia.png"
+          width="200"
+          height="200"
+          alt="Foto de perfil de Lucrecia Vigo">
+        <div class="lucrecia-title-block">
+          <h1 id="lucrecia-nombre">Lucrecia Vigo</h1>
+          <p class="lucrecia-tagline">
+            Estudiante de la Tecnicatura Superior en Desarrollo de Software. Me gusta la programación, 
+            en particular la orientación hacia el backend y las bases de datos. Disfruto aprender sobre 
+            nuevas tecnologías, probar herramientas y construir proyectos que me permitan seguir creciendo 
+            en el área de software.
+          </p>
+        </div>
+      </div>
+
+      <div class="lucrecia-facts" aria-label="Datos basicos">
+        <h2>Datos</h2>
+        <div class="lucrecia-grid">
+          <div class="lucrecia-block">
+            <h2>Ubicación actual</h2>
+            <p>Casilda, Santa Fe, Argentina</p>
+          </div>
+          <div class="lucrecia-block">
+            <h2>Edad</h2>
+            <p>40 años</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lucrecia-grid lucrecia-grid--facts" aria-label="Habilidades e intereses">
+        <div class="lucrecia-block">
+          <h2>Habilidades</h2>
+          <ul>
+            <li><span class="lucrecia-pill">PHP</span></li>
+            <li><span class="lucrecia-pill">Python</span></li>
+            <li><span class="lucrecia-pill">MySQL</span></li>
+            <li><span class="lucrecia-pill">JavaScript</span></li>
+          </ul>
+        </div>
+        <div class="lucrecia-block">
+          <h2>Peliculas favoritas</h2>
+          <ul>
+            <li><span class="lucrecia-pill">Una mente brillante</span></li>
+            <li><span class="lucrecia-pill">Bastardos sin gloria</span></li>
+            <li><span class="lucrecia-pill">UP: una aventura de altura</span></li>
+          </ul>
+        </div>
+        <div class="lucrecia-block lucrecia-block--span">
+          <h2>Discos musicales favoritos</h2>
+          <ul>
+            <li><span class="lucrecia-pill">Mediterráneo - Joan Manuel Serrat</span></li>
+            <li><span class="lucrecia-pill">¿Dónde están los ladrones? - Shakira</span></li>
+            <li><span class="lucrecia-pill">Vasos vacíos - Los fabulosos Cadillacs</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lucrecia-toggle">
+        <button
+          type="button"
+          class="lucrecia-btn"
+          id="lucrecia-btn-toggle"
+          aria-expanded="false"
+          aria-controls="lucrecia-details">
+          Mostrar más sobre mí
+        </button>
+      </div>
+
+      <section id="lucrecia-details" class="lucrecia-details" hidden aria-labelledby="lucrecia-extra-title">
+        <h2 id="lucrecia-extra-title">Más sobre mí</h2>
+
+        <div class="lucrecia-details-grid">
+          <section class="lucrecia-details-block" aria-labelledby="lucrecia-extra-gustos">
+            <h3 id="lucrecia-extra-gustos">Me gusta mucho</h3>
+            <ul class="lucrecia-details-list">
+              <li>Leer. No me imagino la vida sin libros, son mi compañía desde muy pequeña.</li>
+              <li>Viajar. Nada como conocer lugares nuevos y ver paisajes de ensueños.</li>
+              <li>Tener animales cerca. Pelos, plumas, escamas y exoesqueletos, en ese orden.</li>
+            </ul>
+          </section>
+
+          <section class="lucrecia-details-block" aria-labelledby="lucrecia-extra-futuro">
+            <h3 id="lucrecia-extra-futuro">En el futuro quisiera</h3>
+            <ul class="lucrecia-details-list">
+              <li>Seguir aprendiendo siempre, de áreas nuevas y variadas.</li>
+              <li>Contribuir a proyectos que tengan un impacto positivo en la sociedad.</li>
+              <li>Tener más confianza en mis ideas locas y llevarlas a cabo.</li>
+            </ul>
+          </section>
+
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script src="../js/lucrecia.js" defer></script>
+</body>
+
+</html>

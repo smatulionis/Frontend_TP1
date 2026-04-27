@@ -1,0 +1,414 @@
+/* Tarjeta - Lucrecia Vigo (TP1) - basada en la presentacion de Sebastián */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600&display=swap");
+
+:root {
+  --l-blue: #9ac4f8;
+  --l-mint: #99edcc;
+  --l-rose: #ffc09f;
+  --l-jet: #534541;
+  --l-ink: var(--l-jet);
+  --l-deep: #6e4a42;
+  --l-surface: #ffffff;
+  --l-surface-tint: #eef8f5;
+  --l-text: var(--l-jet);
+  --l-muted: var(--l-deep);
+  --l-border: rgba(83, 69, 65, 0.16);
+  --l-radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.lucrecia-page {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--l-text);
+  background: linear-gradient(165deg, #c5f5e8 0%, #dceef9 50%, #fffefc 100%);
+}
+
+.lucrecia-skip {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.lucrecia-skip:focus {
+  left: 12px;
+  top: 12px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  z-index: 10;
+  background: #ffffff;
+  color: var(--l-ink);
+  border: 2px solid var(--l-rose);
+  border-radius: 8px;
+}
+
+.lucrecia-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 3px solid var(--l-mint);
+  box-shadow: 0 4px 20px rgba(83, 69, 65, 0.05);
+}
+
+.lucrecia-nav a {
+  color: var(--l-ink);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(83, 69, 65, 0.12);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.lucrecia-nav a:hover,
+.lucrecia-nav a:focus-visible {
+  color: var(--l-ink);
+  border-color: var(--l-rose);
+  background: var(--l-blue);
+  outline: none;
+}
+
+.lucrecia-nav .lucrecia-back {
+  background: var(--l-rose);
+  color: var(--l-ink);
+  font-weight: 700;
+  border: 2px solid #e8a080;
+  padding: 12px 22px;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(200, 120, 90, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.lucrecia-nav .lucrecia-back:hover {
+  transform: translateY(-2px);
+  background: #ffad88;
+  color: var(--l-ink);
+  border-color: var(--l-mint);
+  box-shadow: 0 6px 20px rgba(200, 100, 70, 0.18);
+}
+
+.lucrecia-nav .lucrecia-back:focus-visible {
+  outline: 3px solid var(--l-blue);
+  outline-offset: 3px;
+}
+
+.lucrecia-nav-label {
+  color: var(--l-deep);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lucrecia-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.lucrecia-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--l-surface);
+  border: 2px solid var(--l-border);
+  border-radius: var(--l-radius);
+  border-left: 10px solid var(--l-rose);
+  padding: 28px 24px 32px;
+  box-shadow: 0 16px 40px rgba(83, 69, 65, 0.07), 0 0 0 1px rgba(153, 237, 204, 0.65);
+}
+
+.lucrecia-card h1,
+.lucrecia-facts > h2,
+.lucrecia-details > h2 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-variation-settings: "opsz" 72;
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+  color: var(--l-ink);
+}
+
+.lucrecia-tagline {
+  color: var(--l-deep);
+  font-size: 0.95rem;
+  margin: 0 0 20px;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+.lucrecia-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.lucrecia-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--l-mint);
+  box-shadow: 0 0 0 3px var(--l-blue), 0 10px 24px rgba(83, 69, 65, 0.08);
+}
+
+.lucrecia-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.lucrecia-grid--facts {
+  margin-top: 20px;
+}
+
+.lucrecia-block--span {
+  grid-column: 1 / -1;
+}
+
+.lucrecia-block h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--l-ink);
+  margin: 0 0 8px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+}
+
+.lucrecia-block p,
+.lucrecia-block li {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--l-text);
+}
+
+.lucrecia-block ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lucrecia-pill {
+  display: inline-block;
+  background: var(--l-mint);
+  color: var(--l-ink);
+  border: 1px solid rgba(255, 192, 159, 0.65);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.lucrecia-details {
+  margin-top: 20px;
+  padding: 16px 16px 16px 20px;
+  background: var(--l-surface-tint);
+  border-radius: 12px;
+  border: 2px solid rgba(83, 69, 65, 0.1);
+  border-left: 6px solid var(--l-blue);
+}
+
+.lucrecia-details p {
+  margin: 0 0 8px;
+  color: var(--l-deep);
+  font-size: 0.95rem;
+}
+
+.lucrecia-details p:last-child {
+  margin-bottom: 0;
+}
+
+.lucrecia-details-lead {
+  margin: 0 0 16px !important;
+  line-height: 1.55;
+}
+
+.lucrecia-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.lucrecia-details-block h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--l-text);
+  margin: 0 0 8px;
+}
+
+.lucrecia-details-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--l-deep);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.lucrecia-details-list li {
+  margin-bottom: 6px;
+}
+
+.lucrecia-details-list li:last-child {
+  margin-bottom: 0;
+}
+
+.lucrecia-details-block p {
+  margin: 0;
+  color: var(--l-deep);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.lucrecia-details-block--full {
+  grid-column: 1 / -1;
+}
+
+.lucrecia-toggle {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.lucrecia-btn {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid #e8a080;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--l-rose);
+  color: var(--l-ink);
+  box-shadow: 0 4px 14px rgba(200, 120, 90, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.lucrecia-btn:hover {
+  transform: translateY(-2px);
+  background: #ffad88;
+  color: var(--l-ink);
+  border-color: var(--l-mint);
+  box-shadow: 0 6px 20px rgba(200, 100, 70, 0.18);
+}
+
+.lucrecia-btn:focus-visible {
+  outline: 3px solid var(--l-blue);
+  outline-offset: 3px;
+}
+
+body.lucrecia-theme-day {
+  --l-surface: #ffffff;
+  --l-surface-tint: #e8f5fc;
+  --l-border: rgba(83, 69, 65, 0.1);
+  background: linear-gradient(180deg, var(--l-mint) 0%, var(--l-blue) 42%, #ffffff 100%);
+}
+
+body.lucrecia-theme-day .lucrecia-card {
+  background: var(--l-surface-tint);
+  box-shadow: 0 18px 44px rgba(83, 69, 65, 0.05), 0 0 0 1px rgba(154, 196, 248, 0.45);
+}
+
+body.lucrecia-theme-day .lucrecia-nav {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 3px solid var(--l-rose);
+}
+
+body.lucrecia-theme-day .lucrecia-nav a:hover,
+body.lucrecia-theme-day .lucrecia-nav a:focus-visible {
+  background: var(--l-mint);
+  border-color: var(--l-rose);
+}
+
+body.lucrecia-theme-day .lucrecia-nav .lucrecia-back {
+  border-color: var(--l-blue);
+  box-shadow: 0 4px 12px rgba(83, 69, 65, 0.1);
+}
+
+body.lucrecia-theme-day .lucrecia-nav .lucrecia-back:hover {
+  background: #ffad88;
+  border-color: var(--l-mint);
+}
+
+body.lucrecia-theme-day .lucrecia-details {
+  background: var(--l-surface-tint);
+  border: 2px solid rgba(83, 69, 65, 0.07);
+  border-left: 6px solid var(--l-rose);
+}
+
+@media (min-width: 400px) {
+  .lucrecia-card {
+    padding: 32px 28px 36px;
+  }
+
+  .lucrecia-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lucrecia-head {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .lucrecia-title-block {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .lucrecia-wrap {
+    padding: 40px 24px 56px;
+  }
+
+  .lucrecia-card h1,
+  .lucrecia-facts > h2,
+  .lucrecia-details > h2 {
+    font-size: 2rem;
+  }
+
+  .lucrecia-photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .lucrecia-details-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lucrecia-details-block--full {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lucrecia-card {
+    max-width: 720px;
+    padding: 40px 40px 44px;
+  }
+
+  .lucrecia-nav {
+    padding: 20px 24px;
+  }
+}
