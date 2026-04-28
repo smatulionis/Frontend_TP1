@@ -31,6 +31,29 @@
                         Somos un grupo de estudiantes enfocados en crear interfaces claras, humanas y bien organizadas
                         con HTML y CSS. Este proyecto reúne perfiles distintos dentro de una misma identidad visual.
                     </p>
+
+                    <div class="home-interactive">
+                        <button
+                            type="button"
+                            class="home-action-btn"
+                            id="home-btn-saludo"
+                            aria-expanded="false"
+                            aria-controls="home-saludo-panel">
+                            Ver mensaje del equipo
+                        </button>
+                        <div
+                            id="home-saludo-panel"
+                            class="home-saludo-panel"
+                            hidden
+                            role="region"
+                            aria-label="Mensaje del equipo">
+                            <p class="home-saludo-text">
+                                Gracias por visitar nuestro trabajo. Este sitio es el resultado de consensos de diseño,
+                                pruebas en equipo y ganas de dejar una base sólida para seguir ampliando el proyecto
+                                en la materia.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -104,6 +127,8 @@
     <footer class="home-footer">
         <p>Proyecto Frontend - 2026</p>
     </footer>
+
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>
