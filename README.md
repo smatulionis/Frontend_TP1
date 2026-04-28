@@ -16,7 +16,7 @@ Este trabajo práctico corresponde a la materia Frontend de la Tecnicatura Super
 |---|---|
 | Sebastián Vitcop | github.com/Sebasvitcop |
 | Sebastián Matulionis | _[link al perfil — completar]_ |
-| Melody Amaro | _[link al perfil — completar]_ |
+| Melody Amaro | https://github.com/melodyamaro/ |
 | Lucrecia Vigo | https://github.com/LucreLucre |
 
 ---
@@ -138,7 +138,9 @@ btnToggle.addEventListener("click", function () {
 
 ### Melody Amaro (`integrantes/melody.html` + `js/melody.js`)
 
+**Función:** Toggle "Mostrar más sobre mí" + cambio de tema
 
+Al hacer clic en el botón **"Mostrar más sobre mí"**, se despliega/oculta la sección **"Detalles extra"**. Además, al mostrar el contenido extra se aplica un **cambio de estilo** en la página alternando una clase de tema en el `body` (para evidenciar interactividad visual). El botón actualiza `aria-expanded` para accesibilidad.
 
 ---
 
@@ -165,11 +167,14 @@ Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y fe
 | Herramienta | Uso |
 |---|---|
 | **Claude (Anthropic)** | Asistencia en código CSS, debugging y estructura HTML — Sebastián Vitcop |
+| **Cursor** | Asistencia en JavaScript (toggle + cambio de tema) y ajustes de contenido — Melody Amaro |
 | _[Completar por cada integrante según corresponda]_ | |
 
 ### Uso en Contenido y Código
 
 **Sebastián Vitcop** utilizó Claude como asistente técnico para resolver problemas puntuales durante el desarrollo: ajuste de estilos CSS para lograr la foto circular en la tarjeta del índice, corrección de conflictos con `git stash` y `git pull --rebase`, y consultas sobre cómo aplicar la paleta de colores compartida del equipo a su tarjeta individual. El código y las decisiones de diseño fueron tomadas por el integrante; la IA actuó como guía para resolver dudas específicas.
+
+**Melody Amaro** utilizó Cursor como apoyo para implementar la interactividad de su tarjeta: mostrar/ocultar la sección de detalles (“Más sobre mí”) con actualización de `aria-expanded` y aplicar un cambio de estilo alternando una clase de tema en el `body`. También se utilizó para revisar estructura HTML/CSS y coherencia visual con la portada.
 
 **Lucrecia Vigo** utilizó Claude (Sonnet 4.6) para crear interactividad js en su tarjeta personal. La misma sugiere una película, un album musical y una actividad según 4 estados de ánimo disponibles para elegir (aventurero, reflexivo, melancólico y feliz). Al seleccionar un estado de ánimo, se despliega un espacio con las sugerencias relacionadas. El código fue generado por la IA, pero integrado a una funcionalidad preexistente por la desarrolladora.
 
@@ -178,6 +183,8 @@ Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y fe
 ### Imágenes y Avatares
 
 **Sebastián Vitcop:** El avatar fue generado a partir de una foto personal propia. El prompt utilizado fue generar una caricatura animada en estilo ilustración a partir de la foto original.
+
+**Melody Amaro:** El avatar se generó con ChatGPT a partir de una foto de referencia para mantener privacidad. Además del estilo ilustrado alineado al resto del equipo, en la composición se incluyeron **elementos visuales relacionados con hobbies e intereses personales** (por ejemplo cine y viajes), para que la imagen refleje mejor quién soy más allá del retrato.
 
 **Lucrecia Vigo** El avatar fue generado a partir de una foto personal y mostrándole el estilo de los compañeros que ya habían subido su avatar para que copie el estilo. Se usó Claude (Sonnet 4.6).
 
