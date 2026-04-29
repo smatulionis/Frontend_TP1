@@ -168,6 +168,7 @@ Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y fe
 |---|---|
 | **Claude (Anthropic)** | Asistencia en código CSS, debugging y estructura HTML — Sebastián Vitcop |
 | **Cursor** | Asistencia en JavaScript (toggle + cambio de tema) y ajustes de contenido — Melody Amaro |
+| **Claude (Sonnet 4.6)** | Asistencia en interacción JavaScript - Lucrecia Vigo|
 | _[Completar por cada integrante según corresponda]_ | |
 
 ### Uso en Contenido y Código
@@ -186,7 +187,7 @@ Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y fe
 
 **Melody Amaro:** El avatar se generó con ChatGPT a partir de una foto de referencia para mantener privacidad. Además del estilo ilustrado alineado al resto del equipo, en la composición se incluyeron **elementos visuales relacionados con hobbies e intereses personales** (por ejemplo cine y viajes), para que la imagen refleje mejor quién soy más allá del retrato.
 
-**Lucrecia Vigo** El avatar fue generado a partir de una foto personal y mostrándole el estilo de los compañeros que ya habían subido su avatar para que copie el estilo. Se usó Claude (Sonnet 4.6).
+**Lucrecia Vigo** El avatar fue generado a partir de una foto personal y mostrándole los avatares de los compañeros para que copie el estilo. Se usó ChatGPT.
 
 > _[Cada integrante debe completar el criterio y prompt de su propio avatar aquí]_
 
