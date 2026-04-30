@@ -1,6 +1,6 @@
 # Grupo 6 — Proyecto Frontend TP1
 
-> 🚀 **Deploy:** _[Link de Vercel — completar cuando esté disponible]_
+> 🚀 **Deploy:** https://frontend-tp-1.vercel.app/
 
 ---
 
@@ -160,7 +160,7 @@ Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y fe
 
 ## Enlace al Proyecto Desplegado
 
-> 🔗 _[Link de Vercel — completar cuando esté disponible]_
+> 🔗 https://frontend-tp-1.vercel.app/
 
 ---
 
