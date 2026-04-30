@@ -15,7 +15,7 @@ Este trabajo práctico corresponde a la materia Frontend de la Tecnicatura Super
 | Nombre | GitHub |
 |---|---|
 | Sebastián Vitcop | github.com/Sebasvitcop |
-| Sebastián Matulionis | _[link al perfil — completar]_ |
+| Sebastián Matulionis | https://github.com/smatulionis |
 | Melody Amaro | https://github.com/melodyamaro/ |
 | Lucrecia Vigo | https://github.com/LucreLucre |
 
@@ -106,7 +106,9 @@ No se utiliza ninguna librería de iconos externa. Las imágenes de perfil de ca
 
 ### Portada (`index.html` + `js/script.js`)
 
-> _[Completar: describir la interacción JS implementada en la portada — por ejemplo: mensaje al hacer clic, animación, cambio de estilo, etc.]_
+**Función:** Mostrar/ocultar mensaje del equipo
+
+En la portada hay un botón "Ver mensaje del equipo" que permite mostrar u ocultar un mensaje breve del equipo. Al activarlo, el contenido aparece dentro de un panel accesible y el botón actualiza `aria-expanded` y su texto según el estado. Además, la página aplica una clase en el `body` para modificar el fondo cuando el mensaje está visible, reforzando la interacción visual.
 
 ---
 
@@ -132,7 +134,9 @@ btnToggle.addEventListener("click", function () {
 
 ### Sebastián Matulionis (`integrantes/sebastian.html` + `js/sebastian.js`)
 
+**Función:** Toggle "Mostrar más sobre mí" y cambio de tema
 
+Al hacer clic en el botón **"Mostrar más sobre mí"**, se despliega la información adicional de la tarjeta personal. También se activa una clase visual en la página para cambiar el tema y darle más destaque a la tarjeta. Al volver a hacer clic, la sección se oculta nuevamente y el estilo vuelve a su estado original.
 
 ---
 
@@ -169,7 +173,7 @@ Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y fe
 | **Claude (Anthropic)** | Asistencia en código CSS, debugging y estructura HTML — Sebastián Vitcop |
 | **Cursor** | Asistencia en JavaScript (toggle + cambio de tema) y ajustes de contenido — Melody Amaro |
 | **Claude (Sonnet 4.6)** | Asistencia en interacción JavaScript - Lucrecia Vigo|
-| _[Completar por cada integrante según corresponda]_ | |
+| **ChatGPT** | Apoyo para revisar ideas, proponer mejoras de redacción y resolver dudas técnicas específicas durante el desarrollo — Sebastián Matulionis |
 
 ### Uso en Contenido y Código
 
@@ -179,7 +183,7 @@ Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y fe
 
 **Lucrecia Vigo** utilizó Claude (Sonnet 4.6) para crear interactividad js en su tarjeta personal. La misma sugiere una película, un album musical y una actividad según 4 estados de ánimo disponibles para elegir (aventurero, reflexivo, melancólico y feliz). Al seleccionar un estado de ánimo, se despliega un espacio con las sugerencias relacionadas. El código fue generado por la IA, pero integrado a una funcionalidad preexistente por la desarrolladora.
 
-> _[Cada integrante debe completar su propio párrafo aquí]_
+**Sebastián Matulionis** utilizó ChatGPT como apoyo durante el desarrollo para resolver dudas puntuales y ordenar la estructura del HTML. También se usó para consultar ideas de implementación de estilos de CSS y para el desarrollo de la función de Javascript en la sección "Más sobre mí".
 
 ### Imágenes y Avatares
 
@@ -189,7 +193,7 @@ Muestra 4 opciones de estado de ánimo (aventurero, reflexivo, melancólico y fe
 
 **Lucrecia Vigo** El avatar fue generado a partir de una foto personal y mostrándole los avatares de los compañeros para que copie el estilo. Se usó ChatGPT.
 
-> _[Cada integrante debe completar el criterio y prompt de su propio avatar aquí]_
+**Sebastián Matulionis:** El avatar se generó con ChatGPT a partir de una foto personal. El prompt pidió un retrato en forma de avatar con contexto de programador.
 
 ---
 
