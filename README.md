@@ -110,6 +110,8 @@ No se utiliza ninguna librería de iconos externa. Las imágenes de perfil de ca
 
 En la portada hay un botón "Ver mensaje del equipo" que permite mostrar u ocultar un mensaje breve del equipo. Al activarlo, el contenido aparece dentro de un panel accesible y el botón actualiza `aria-expanded` y su texto según el estado. Además, la página aplica una clase en el `body` para modificar el fondo cuando el mensaje está visible, reforzando la interacción visual.
 
+<img width="771" height="400" alt="image" src="https://github.com/user-attachments/assets/02c67404-2195-4c85-aae4-92d4929a197f" />
+
 ---
 
 ### Sebastián Vitcop (`integrantes/sebastianv.html` + `js/sebastianv.js`)
@@ -137,6 +139,8 @@ btnToggle.addEventListener("click", function () {
 **Función:** Toggle "Mostrar más sobre mí" y cambio de tema
 
 Al hacer clic en el botón **"Mostrar más sobre mí"**, se despliega la información adicional de la tarjeta personal. También se activa una clase visual en la página para cambiar el tema y darle más destaque a la tarjeta. Al volver a hacer clic, la sección se oculta nuevamente y el estilo vuelve a su estado original.
+
+<img width="673" height="348" alt="image" src="https://github.com/user-attachments/assets/9863e57b-1d47-46b1-bf45-a84afb1a7853" />
 
 ---
 
