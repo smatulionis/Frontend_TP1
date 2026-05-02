@@ -39,6 +39,8 @@ Este trabajo práctico corresponde a la materia Frontend de la Tecnicatura Super
 ├── index.html              ← Portada principal del sitio
 ├── bitacora.html           ← Sección bitácora del proceso
 ├── README.md               ← Este archivo
+├── readme-assets/          ← Capturas para el README (documentación)
+│   └── melody-amaro-js.png ← Interactividad JS — tarjeta Melody Amaro
 │
 ├── css/
 │   ├── styles.css          ← Estilos globales (portada y bitácora)
@@ -149,6 +151,8 @@ Al hacer clic en el botón **"Mostrar más sobre mí"**, se despliega la informa
 **Función:** Toggle "Mostrar más sobre mí" + cambio de tema
 
 Al hacer clic en el botón **"Mostrar más sobre mí"**, se despliega/oculta la sección **"Detalles extra"**. Además, al mostrar el contenido extra se aplica un **cambio de estilo** en la página alternando una clase de tema en el `body` (para evidenciar interactividad visual). El botón actualiza `aria-expanded` para accesibilidad.
+
+<img width="771" alt="Captura: tarjeta Melody Amaro con la sección Detalles extra visible (toggle y cambio de tema)" src="readme-assets/melody-amaro-js.png" />
 
 ---
 
