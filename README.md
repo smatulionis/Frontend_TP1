@@ -14,7 +14,7 @@ Este trabajo práctico corresponde a la materia Frontend de la Tecnicatura Super
 
 | Nombre | GitHub |
 |---|---|
-| Sebastián Vitcop | github.com/Sebasvitcop |
+| Sebastián Vitcop | https://github.com/Sebasvitcop |
 | Sebastián Matulionis | https://github.com/smatulionis |
 | Melody Amaro | https://github.com/melodyamaro/ |
 | Lucrecia Vigo | https://github.com/LucreLucre |
@@ -39,8 +39,9 @@ Este trabajo práctico corresponde a la materia Frontend de la Tecnicatura Super
 ├── index.html              ← Portada principal del sitio
 ├── bitacora.html           ← Sección bitácora del proceso
 ├── README.md               ← Este archivo
-├── readme-assets/          ← Capturas para el README (documentación)
-│   └── melody-amaro-js.png ← Interactividad JS — tarjeta Melody Amaro
+├── readme-assets/              ← Capturas para el README (documentación)
+│   ├── melody-amaro-js.png     ← Interactividad JS — tarjeta Melody Amaro
+│   └── sebastian-vitcop-js.png ← Interactividad JS — tarjeta Sebastián Vitcop
 │
 ├── css/
 │   ├── styles.css          ← Estilos globales (portada y bitácora)
@@ -57,7 +58,7 @@ Este trabajo práctico corresponde a la materia Frontend de la Tecnicatura Super
 │   └── lucrecia.js         ← JS tarjeta Lucrecia Vigo
 │
 ├── img/
-│   ├── fotoSebasV.png      ← Avatar Sebastián Vitcop
+│   ├── fotosebasV.png      ← Avatar Sebastián Vitcop
 │   ├── avatar_sebastian.png← Avatar Sebastián Matulionis
 │   ├── melody-avatar.png   ← Avatar Melody Amaro
 │   └── avatar_lucrecia.png ← Avatar Lucrecia Vigo
@@ -122,17 +123,24 @@ En la portada hay un botón "Ver mensaje del equipo" que permite mostrar u ocult
 
 Al hacer clic en el botón **"Mostrar más sobre mí"**, se despliega una sección oculta con información adicional del integrante (hobbies, bandas favoritas y objetivos). Al hacer clic nuevamente, la sección se oculta y el texto del botón cambia a **"Ocultar detalles"**. La función también actualiza el atributo `aria-expanded` para accesibilidad.
 
+<img width="771" alt="Captura: tarjeta Sebastián Vitcop con la sección Más sobre mí visible (toggle)" src="readme-assets/sebastian-vitcop-js.png" />
+
 ```javascript
-btnToggle.addEventListener("click", function () {
-  var isHidden = extra.hasAttribute("hidden");
-  if (isHidden) {
-    extra.removeAttribute("hidden");
-    btnToggle.textContent = labelLess;
-  } else {
-    extra.setAttribute("hidden", "hidden");
-    btnToggle.textContent = labelMore;
-  }
-});
+if (btnToggle && extra) {
+  btnToggle.addEventListener("click", function () {
+    var isHidden = extra.hasAttribute("hidden");
+
+    if (isHidden) {
+      extra.removeAttribute("hidden");
+      btnToggle.setAttribute("aria-expanded", "true");
+      btnToggle.textContent = labelLess;
+    } else {
+      extra.setAttribute("hidden", "hidden");
+      btnToggle.setAttribute("aria-expanded", "false");
+      btnToggle.textContent = labelMore;
+    }
+  });
+}
 ```
 ---
 
